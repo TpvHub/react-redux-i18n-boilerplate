@@ -1,0 +1,20 @@
+.product-modal {
+  .ant-form-item {
+    margin-bottom: 5px;
+  }
+
+  &__selling-price {
+    display: flex;
+
+    > * {
+      flex-basis: 50%;
+    }
+  }
+
+  &__selling-price-output {
+    > label {
+      display: block;
+      line-height: 20px !important;
+    }
+  }
+}

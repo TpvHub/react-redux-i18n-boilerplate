@@ -1,0 +1,15 @@
+.master-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__main {
+    display: flex;
+    flex-basis: 1px;
+    flex-grow: 1;
+
+    > * {
+      width: 100%;
+    }
+  }
+}

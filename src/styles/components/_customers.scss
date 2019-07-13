@@ -1,0 +1,16 @@
+.customer-information {
+  width: 60%;
+  margin: auto;
+
+  &__content {
+
+    &__title {
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .ant-row {
+      margin-bottom: 10px;
+    }
+  }
+}

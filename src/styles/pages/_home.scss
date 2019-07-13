@@ -1,0 +1,57 @@
+.home {
+  // &__content {
+  //   padding: 25px;
+  //   border: 1px solid #DADADA;
+  // }
+}
+
+.releases {
+  &__main-title {
+    color: #146467;
+    font-weight: bold;
+  }
+}
+
+.release-item {
+  background-color: #f3f9f9;
+  margin-bottom: 15px;
+
+  &__menu {
+    background: transparent !important;
+    border: 1px solid #dadada;
+  }
+
+  &__sub-menu {
+    .ant-menu-sub {
+      background: transparent !important;
+      margin-bottom: 15px !important;
+    }
+
+    .ant-menu-item {
+      height: 20px !important;
+      line-height: 20px !important;
+    }
+  }
+
+  &__main-title {
+    color: #146467;
+    font-weight: bold;
+  }
+
+  &__sub-title {
+    color: #219094;
+    position: relative;
+
+    &--markable {
+      &:before {
+        @include triangle(8px, #219094, right);
+
+        content: '';
+        left: -10px;
+        position: absolute;
+        transform: translate(-100%, -50%);
+        top: 50%;
+      }
+    }
+  }
+}
