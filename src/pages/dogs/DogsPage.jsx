@@ -1,9 +1,9 @@
-import React from "react"
+import React from 'react';
 
-import { RandomDogContainer } from "modules/dogs"
+import DogsContainer from 'modules/dogs';
 
-export default function RandomDogPage() {
+export default function DogsPage() {
   return (
-    <RandomDogContainer />
-  )
+    <DogsContainer />
+  );
 }

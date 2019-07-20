@@ -1,11 +1,11 @@
-import { AuthRequest } from 'api'
-import { } from 'reducers/auth/select'
-import * as ActionTypes from './constant'
+import { AuthRequest } from 'api';
+import { } from 'reducers/auth/select';
+import * as ActionTypes from './constant';
 
 export const register = (cb = () => null) => (dispatch) => {
   dispatch({
     type: ActionTypes.LOGGED_INFO_REQUEST
-  })
+  });
 
   AuthRequest.register({})
     .then(response => {
@@ -16,8 +16,8 @@ export const register = (cb = () => null) => (dispatch) => {
           token: response.data.key,
           // username: response.data.username,
         }
-      })
-      cb(null, response)
+      });
+      cb(null, response);
     })
     .catch((err) => {
       dispatch({
@@ -25,6 +25,6 @@ export const register = (cb = () => null) => (dispatch) => {
         payload: {
           error: err.errors
         }
-      })
-    })
-}
+      });
+    });
+};
