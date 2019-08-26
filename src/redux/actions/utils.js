@@ -1,0 +1,1 @@
+export const getActionTypeByPrefix = prefix => type => `${prefix}.${type}`

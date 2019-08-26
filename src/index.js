@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter } from 'react-router-dom';
 
-import configStore from 'store';
+import configStore from 'redux/store';
 import Root from './Root';
 import {
   BASE_PATH,
