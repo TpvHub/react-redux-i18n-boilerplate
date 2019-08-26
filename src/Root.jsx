@@ -4,15 +4,17 @@ import { Switch, Route } from 'react-router-dom';
 
 // pages
 import LoginPage from 'pages/login';
-import DogsPage from 'pages/dogs';
+import HomePage from 'pages/home';
+import UserPage from 'pages/user';
 import { NotFound } from 'elements/statics';
 
 export default function Root() {
   return (
     <div className="Root-App">
       <Switch>
-        <Route path="/login" component={LoginPage} />
-        <Route path="/dogs" component={DogsPage} />
+        <Route exact path="/login" component={LoginPage} />
+        <Route path="/user" component={UserPage} />
+        <Route exact path="/" component={HomePage} />
         <Route component={NotFound} />
       </Switch>
     </div>

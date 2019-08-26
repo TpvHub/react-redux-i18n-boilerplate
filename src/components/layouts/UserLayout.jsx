@@ -2,9 +2,9 @@ import React, { Fragment } from 'react'
 
 import {
   Header, Footer
-} from 'components/layouts'
+} from 'components/layouts/user'
 
-export default function MasterLayout(props) {
+export default function UserLayout(props) {
   return (
     <Fragment>
       <Header />

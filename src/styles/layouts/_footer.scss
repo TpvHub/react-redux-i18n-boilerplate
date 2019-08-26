@@ -1,15 +1,3 @@
 .footer {
-  background-color: $dark-gray;
-
-  &__content {
-    padding: 10px 30px;
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-
-    span {
-      color: white;
-    }
-  }
+  border-top: 1px solid black;
 }
