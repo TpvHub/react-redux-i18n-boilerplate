@@ -7,13 +7,18 @@ import LoginPage from 'pages/login';
 import HomePage from 'pages/home';
 import UserPage from 'pages/user';
 import { NotFound } from 'elements/statics';
+import AuthRoute, {
+  checkAdmin
+} from 'elements/AuthRoute'
 
 export default function Root() {
   return (
     <div className="Root-App">
       <Switch>
         <Route exact path="/login" component={LoginPage} />
-        <Route path="/user" component={UserPage} />
+        <AuthRoute path="/user" component={UserPage} middlewares={[
+          checkAdmin
+        ]} />
         <Route exact path="/" component={HomePage} />
         <Route component={NotFound} />
       </Switch>

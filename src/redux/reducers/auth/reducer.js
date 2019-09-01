@@ -3,8 +3,10 @@ import { combineReducers } from 'redux';
 const INITIAL_STATE = {
   loggedInfo: {
     token: null,
-    username: null,
-    userId: null
+    userInfo: {
+      _id: null,
+      email: null
+    }
   },
   loginState: {
     email: null,
@@ -24,13 +26,11 @@ const loggedInfo = (state = INITIAL_STATE.loggedInfo, { type }) => {
   }
 };
 
-
 const loginState = (state = INITIAL_STATE.loginState, { type }) => {
   switch (type) {
     default: return state;
   }
 };
-
 
 const registerState = (state = INITIAL_STATE.registerState, { type }) => {
   switch (type) {

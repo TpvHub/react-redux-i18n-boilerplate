@@ -26,7 +26,6 @@ class AuthRoute extends React.Component {
       })
   }
 
-
   render() {
     const { path, component: Component, ...rest } = this.props
     return (
