@@ -56,5 +56,8 @@
     "source-map-explorer": "^2.0.1",
     "webpack-ant-icon-loader": "^1.0.8",
     "webpack-bundle-analyzer": "^3.3.2"
+  },
+  "engines": {
+    "node": "10"
   }
 }
