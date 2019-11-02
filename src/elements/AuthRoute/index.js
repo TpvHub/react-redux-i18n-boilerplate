@@ -1,3 +1,3 @@
-export { default } from './AuthRoute'
+export { default } from './AuthRoute';
 
-export * from './middleware'
+export * from './middleware';

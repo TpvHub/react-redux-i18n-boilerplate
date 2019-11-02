@@ -1,7 +1,11 @@
-export const LOGIN_PATH = '/login'
+export const LOGIN_PATH = '/login';
 
-export const checkAdmin = (store) => new Promise((rs, rj) => {
-    setTimeout(() => {
-        rs(LOGIN_PATH)
-    }, 2000);
-})
+
+/**
+ * {} store
+ */
+export const checkAdmin = () => new Promise((rs) => {
+  setTimeout(() => {
+    rs();
+  }, 2000);
+});
