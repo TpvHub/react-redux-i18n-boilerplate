@@ -29,15 +29,15 @@ class AuthRoute extends React.Component {
 
   render() {
     // extract props and state
-    const { path, component: Component, ...rest } = this.props;
+    const { path, component: Component } = this.props;
     const { urlRedirect, isAllowEnter } = this.state;
 
     return (
       <Route
         path={path}
-        render={(props) => {
+        render={(routeProps) => {
           if (isAllowEnter) {
-            return <Component {...props} {...rest} />;
+            return <Component {...routeProps} />;
           }
           if (urlRedirect === null) return null;
           return <Redirect to={urlRedirect} />;

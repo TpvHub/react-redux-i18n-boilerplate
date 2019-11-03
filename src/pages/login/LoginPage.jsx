@@ -1,30 +1,35 @@
 import React from 'react';
-import { connect } from 'react-redux';
-
-// actions
-import { authLogin } from 'redux/reducers/auth/actions';
+import PropTypes from 'prop-types';
 
 import { MasterLayout } from 'components/layouts';
+import {
+  LoginContainer
+} from './containers';
 
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
   }
 
+  handleLoginSucess = () => {
+    this.props.history.push('/user/dashboard');
+  }
+
   render() {
     return (
       <MasterLayout>
         <div className="login">
-          <h1>LOGIN PAGE</h1>
+          <LoginContainer
+            onLoginSuccess={this.handleLoginSucess}
+          />
         </div>
       </MasterLayout>
     );
   }
 }
 
-const mapStateToProps = () => ({});
-const mapDispatchToProps = {
-  authLogin
+LoginPage.propTypes = {
+  history: PropTypes.object.isRequired
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);
+export default LoginPage;

@@ -1,16 +1,30 @@
-import { AUTH_LOGIN } from './actionTypes';
+import { AUTH_LOGIN, AUTH_LOGOUT } from './actionTypes';
 import { requestAction } from 'redux/actions/utils';
 
-const demoApiLogin = ({ username }) => new Promise((rs) => {
+// normalize
+import { authLoginNormalizePayload, authLoginNormalizeError } from './normalize';
+
+const demoApiLogin = (loginInfo) => new Promise((rs, rj) => {
   setTimeout(() => {
-    rs(username);
+    if (loginInfo.email === 'abc') rs({ token: 'token' });
+    else rj(new Error('Email not correct'));
   }, 2000);
 });
 
-export const authLogin = (username, password) => {
-  return requestAction(AUTH_LOGIN, demoApiLogin)({
-    username,
-    password
-  });
+export const authLogin = (loginInfo) => {
+  return requestAction(
+    AUTH_LOGIN,
+    demoApiLogin,
+    res => ({
+      ...authLoginNormalizePayload(res),
+      loginInfo
+    }),
+    authLoginNormalizeError
+  )(loginInfo);
 };
 
+export const authLogout = () => dispatch => {
+  dispatch({
+    type: AUTH_LOGOUT
+  });
+};
