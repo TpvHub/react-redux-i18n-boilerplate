@@ -23,7 +23,6 @@ app.listen(port, (err) => {
   console.log(`App listen on port: ${port}`);
 });
 
-
 function shouldCompress(req, res) {
   if (req.headers['x-no-compression']) {
     // don't compress responses with this request header
