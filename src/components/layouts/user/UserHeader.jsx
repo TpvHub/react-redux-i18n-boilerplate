@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function UserHeader(props) {
+export default function UserHeader() {
   return (
     <div className="user-header">
       <Link to="/user/dashboard">DASHBOARD</Link>
@@ -9,4 +9,4 @@ export default function UserHeader(props) {
       <Link to="/user/profile">PROFILE</Link>
     </div>
   );
-};
+}

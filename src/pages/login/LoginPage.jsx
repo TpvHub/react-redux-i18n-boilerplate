@@ -11,16 +11,12 @@ class LoginPage extends React.Component {
     super(props);
   }
 
-  handleSubmit = () => {
-    this.props.authLogin('abc', '123123').then(console.log)
-  }
-
   render() {
     return (
       <MasterLayout>
-        LOGIN PAGE
-
-        <button onClick={this.handleSubmit}>Click</button>
+        <div className="login">
+          <h1>LOGIN PAGE</h1>
+        </div>
       </MasterLayout>
     );
   }

@@ -1,7 +1,7 @@
 import { AUTH_LOGIN } from './actionTypes';
 import { requestAction } from 'redux/actions/utils';
 
-const demoApiLogin = ({ username }) => new Promise((rs, rj) => {
+const demoApiLogin = ({ username }) => new Promise((rs) => {
   setTimeout(() => {
     rs(username);
   }, 2000);

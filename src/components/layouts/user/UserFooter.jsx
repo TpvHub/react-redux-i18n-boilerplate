@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function UserFooter() {
   return (
-    <div className="footer">
-      USER FOOTER
+    <div className="user-footer">
+      <button>Logout</button>
     </div>
   );
 }

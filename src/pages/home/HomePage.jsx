@@ -3,8 +3,10 @@ import { MasterLayout } from 'components/layouts';
 
 function HomePage() {
   return (
-    <MasterLayout className="home">
-      HOME PAGE
+    <MasterLayout>
+      <div className="home">
+        <h1>HOME PAGE</h1>
+      </div>
     </MasterLayout>
   );
 }

@@ -6,10 +6,12 @@ import { Switch, Route } from 'react-router-dom';
 import LoginPage from 'pages/login';
 import HomePage from 'pages/home';
 import UserPage from 'pages/user';
-import { NotFound } from 'elements/statics';
-import AuthRoute, {
-  checkAdmin
-} from 'elements/AuthRoute'
+import { NotFound } from 'pages/statics';
+import AuthRoute, { checkAdmin } from 'elements/AuthRoute';
+
+/**
+ * All pages has diferrent layout: Header, Footer, SideBar, etc .. should place here
+ */
 
 export default function Root() {
   return (
@@ -19,7 +21,7 @@ export default function Root() {
         <AuthRoute path="/user" component={UserPage} middlewares={[
           checkAdmin
         ]} />
-        <Route exact path="/" component={HomePage} />
+        <Route exact path={['/', '/home']} component={HomePage} />
         <Route component={NotFound} />
       </Switch>
     </div>

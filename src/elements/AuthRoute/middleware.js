@@ -7,5 +7,5 @@ export const LOGIN_PATH = '/login';
 export const checkAdmin = () => new Promise((rs) => {
   setTimeout(() => {
     rs();
-  }, 2000);
+  }, 500);
 });

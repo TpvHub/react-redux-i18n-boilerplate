@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { UserLayout } from 'components/layouts';
-import { NotFound } from 'elements/statics';
+import { NotFound } from 'pages/statics';
 
 const DashboardPage = lazy(() => import('./dashboard'));
 const ProfilePage = lazy(() => import('./profile'));
